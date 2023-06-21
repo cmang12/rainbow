@@ -1,0 +1,15 @@
+.button {
+    font-size: 35px;
+    font-family: 'DelaGothic';
+    color:azure;
+    background-color: #C295DE;
+    border: 2px solid #632396;
+    border-radius: 35px; 
+    padding: 10px 20px;
+    transition: all 0.2s ease; 
+}
+
+.button:hover {
+    border: 5px solid #fff; 
+    margin:-5px; 
+}
