@@ -1,0 +1,74 @@
+.circle {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border:none; 
+    text-align: center;
+    cursor: pointer;
+    margin-right: 50px;
+    transition: all 0.2s ease; 
+  }
+
+  .circle:hover {
+    border: 5px solid #fff; 
+  }
+
+  .rating-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rating-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .circle.selected {
+    background-color: #ffcc00;
+  }
+
+  .label {
+    font-size:30px;
+    font-family: 'DelaGothic';
+    color:#B65B71;
+  }
+
+  .labelDiv {
+    margin-bottom: 10px;
+  }
+  
+
+  .circles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .circle[value="1"] {
+    background-color: #FF9C9C;
+  }
+  
+  .circle[value="2"] {
+    background-color: #5B8CA8;
+  }
+  
+  .circle[value="3"] {
+    background-color: #6FD08A;
+  }
+  
+  .circle[value="4"] {
+    background-color: #E2F188;
+  }
+  
+  .circle[value="5"] {
+    background-color: #EFAB7A;
+  }
+
+  .circle[value="6"] {
+    background-color: #C76A6A;
+  }

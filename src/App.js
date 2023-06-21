@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './styles/App.css';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./components/Layout"; 
+import Home from "./pages/Home"; 
+import Login from "./pages/Login"; 
+import Question from "./pages/Question"; 
+import Journal from "./pages/Journal"; 
+
 
 function App() {
+  const [isAuth, setIsAuth] = useState(false); 
+  
+  useEffect(() => {
+    const storedAuth = localStorage.getItem('isAuth');
+    if (storedAuth) {
+      setIsAuth(true);
+    }
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={isAuth ? <Navigate to= "/home"/>: <Navigate to="/login" />}
+        />
+        <Route path="/home" element={<Layout><Home /></Layout>} />
+        <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
+        <Route path="/question" element={<Layout><Question isAuth = {isAuth} /></Layout>} />
+        <Route path="/journal" element ={<Layout><Journal/></Layout>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

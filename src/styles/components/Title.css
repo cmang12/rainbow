@@ -1,0 +1,18 @@
+.Title-logo {
+    height: 20vmin;
+    pointer-events: none;
+  }
+  
+ 
+  
+  .Title-h1 {
+    color: #B65B71;
+    font-size: 35px;
+    font-family: 'DelaGothic', Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .Title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

@@ -1,0 +1,44 @@
+.year-in-pixels-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px; 
+  }
+  
+  .year-in-pixels {
+    display: grid;
+    grid-template-columns: repeat(32, 1fr);
+    grid-gap: 4px;
+  }
+  
+  .pixel {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .grey {
+    background-color: grey;
+  }
+  .mood-1 {
+    background-color: #FF9C9C; 
+  }
+  
+  .mood-2 {
+    background-color: #5B8CA8; 
+  }
+  
+  .mood-3 {
+    background-color: #6FD08A; 
+  }
+  
+  .mood-4 {
+    background-color: #E2F188; 
+  }
+  
+  .mood-5 {
+    background-color: #EFAB7A; 
+  }
+  
+  .mood-6 {
+    background-color: #C76A6A; 
+  }
+  

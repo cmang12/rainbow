@@ -13,8 +13,11 @@
   }
 }
 
+.App-h1 {
+  color: #B65B71;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: #F0CFFF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +39,5 @@
     transform: rotate(360deg);
   }
 }
+
+

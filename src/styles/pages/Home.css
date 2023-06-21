@@ -1,0 +1,35 @@
+.Home {
+    text-align: center;
+  }
+
+  .Home-logo {
+    height: 20vmin;
+    pointer-events: none;
+  }
+  
+ 
+  
+  .Home-h1 {
+    color: #B65B71;
+    font-size: 35px;
+    font-family: 'DelaGothic', Georgia, 'Times New Roman', Times, serif;
+  }
+  .Home-header {
+    background-color: #F0CFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .Home-link {
+    color: #61dafb;
+  }
+  
+  
+
+  
+  

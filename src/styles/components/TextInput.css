@@ -1,0 +1,9 @@
+input[type="text"] {
+    height: 200px;
+    width: 400px;
+  }
+
+.Heading {
+  font-family: 'DelaGothic';
+  color:#B65B71;
+}

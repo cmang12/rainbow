@@ -1,0 +1,23 @@
+body {
+    background-color: #F0CFFF;
+}
+
+.loginPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+p {
+    font-family: 'DelaGothic'; 
+}
+
+.login-with-google-btn {
+    font-size: 20px;
+    font-family: 'DelaGothic';
+    color:azure;
+    background-color: #C295DE;
+    border: 2px solid #632396;
+    border-radius: 35px; /* Adjust the value as needed */
+    padding: 10px 20px;
+}
