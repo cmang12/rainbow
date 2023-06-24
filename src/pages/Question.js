@@ -1,7 +1,9 @@
 import React, {useEffect} from "react"; 
 import RatingInput from '../components/RatingInput'; 
+import CreateEntry from '../components/CreateEntry'; 
 import '../styles/pages/Question.css'; 
 import { useNavigate } from "react-router-dom";
+import {RatingProvider} from '../components/RatingContext'; 
 
 function Question({isAuth}) {
 
@@ -13,9 +15,13 @@ function Question({isAuth}) {
     }, []); 
 
     return (
+        <RatingProvider>
         <div className="Home">
             <RatingInput/> 
+            <CreateEntry/>
+
         </div>
+        </RatingProvider>
       );
   };
   

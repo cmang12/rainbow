@@ -6,17 +6,17 @@
   
   .year-in-pixels {
     display: grid;
-    grid-template-columns: repeat(32, 1fr);
-    grid-gap: 4px;
+    grid-template-columns: repeat(61, 1fr);
+    grid-gap: 3px;
   }
   
   .pixel {
-    width: 20px;
-    height: 20px;
+    width: 13px;
+    height: 13px;
   }
   
   .grey {
-    background-color: grey;
+    background-color: #A6A6A6;
   }
   .mood-1 {
     background-color: #FF9C9C; 

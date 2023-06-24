@@ -10,15 +10,15 @@ const YearInPixels = () => {
     const fetchMoodData = async () => {
       try {
         const q = query(
-          collection(db, 'moods'),
-          where('id', '==', auth.currentUser.uid)
+          collection(db, 'entries'),
+          where('author.id', '==', auth.currentUser.uid)
         );
         const querySnapshot = await getDocs(q);
-        const data = Array(365).fill(null); 
+        const data = Array(365).fill(0); 
         querySnapshot.forEach((doc) => {
-          const mood = doc.data(); 
-          const dayOfYear = getDayOfYear(mood.timestamp.toDate()); 
-          data[dayOfYear - 1] = mood.rating; 
+          const entry = doc.data(); 
+          const dayOfYear = getDayOfYear(entry.timestamp.toDate()); 
+          data[dayOfYear - 1] = entry.rating; 
         });
         setMoodData(data);
       } catch (error) {
@@ -44,7 +44,7 @@ const YearInPixels = () => {
       {moodData.map((rating) => (
           <div
             //key={index}
-            className={`pixel ${rating !== null ? `mood-${rating}` : 'grey'}`}
+            className={`pixel ${rating !== 0 ? `mood-${rating}` : 'grey'}`}
           ></div>
         ))}
       </div>
