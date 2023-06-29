@@ -28,9 +28,10 @@
     height: 40vh;   
   }
 
-  .circle.selected {
-    background-color: #ffcc00;
-  }
+  .circle.selected,
+.circle.selected:hover {
+  border: 5px solid #fff;
+}
 
   .label {
     font-size:25px;

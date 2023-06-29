@@ -3,7 +3,7 @@ import '../styles/components/YearInPixels.css';
 import { db, auth } from '../config/firebase-config';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 
-const YearInPixels = () => {
+const YearInPixels = ({ selectedYear }) => {
   const [moodData, setMoodData] = useState([]);
 
   useEffect(() => {
@@ -14,11 +14,14 @@ const YearInPixels = () => {
           where('author.id', '==', auth.currentUser.uid)
         );
         const querySnapshot = await getDocs(q);
-        const data = Array(365).fill(0); 
+        const data = Array(365).fill(0);
         querySnapshot.forEach((doc) => {
-          const entry = doc.data(); 
-          const dayOfYear = getDayOfYear(entry.timestamp.toDate()); 
-          data[dayOfYear - 1] = entry.rating; 
+          const entry = doc.data();
+          const entryDate = new Date(entry.selectedDate);
+          if (entryDate.getFullYear() === selectedYear) {
+            const dayOfYear = getDayOfYear(entryDate);
+            data[dayOfYear - 1] = entry.rating;
+          }
         });
         setMoodData(data);
       } catch (error) {
@@ -26,10 +29,9 @@ const YearInPixels = () => {
         // Handle the error gracefully
       }
     };
-    // need to consider leap years, can sort by year and month, and then wrapped with ToolTip 
-    // oh and graphs 
+
     fetchMoodData();
-  }, []);
+  }, [selectedYear]);
 
   const getDayOfYear = (date) => {
     const start = new Date(date.getFullYear(), 0, 0);
@@ -37,13 +39,12 @@ const YearInPixels = () => {
     const oneDay = 1000 * 60 * 60 * 24;
     return Math.floor(diff / oneDay);
   };
-  
+
   return (
     <div className="year-in-pixels-container">
       <div className="year-in-pixels">
-      {moodData.map((rating) => (
+        {moodData.map((rating) => (
           <div
-            //key={index}
             className={`pixel ${rating !== 0 ? `mood-${rating}` : 'grey'}`}
           ></div>
         ))}

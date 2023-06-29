@@ -1,3 +1,20 @@
-.Home {
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0CFFF;
+  }
+
+.question-container {
     background-color: #F0CFFF;
 }
+
+.datePicker {
+    flex: 1;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+  
+  .home-content {
+    flex: 1;
+  }
