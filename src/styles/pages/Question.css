@@ -9,11 +9,36 @@
     background-color: #F0CFFF;
 }
 
-.datePicker {
-    flex: 1;
+.datePicker-container {
+    flex:auto; 
     padding-right: 20px;
     padding-top: 30px;
+    position:relative; 
+    display: inline-flex;
+    align-items: center;
+    width: 150px; 
   }
+
+  .datePicker-container .calendar-icon {
+    top: 50%;
+  
+    pointer-events: none;
+  }
+
+  .calendar-icon {
+    margin-right: 10px;
+    color:#C295DE;
+  }
+  
+.datePicker-input {
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+
+}
   
   .home-content {
     flex: 1;

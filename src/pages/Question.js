@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { RatingProvider } from "../components/RatingContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 function Question({ isAuth }) {
   const navigate = useNavigate();
@@ -21,13 +23,15 @@ function Question({ isAuth }) {
     <div className="page-container">
       <div className="question-container">
         <RatingProvider>
-          <div className="datePicker">
-            <label>Date:</label>
+          <div className="datePicker-container">
+            <FontAwesomeIcon icon={faCalendarAlt} className="calendar-icon" />
             <DatePicker
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
               dateFormat="yyyy-MM-dd"
+              className="datePicker-input"
             />
+            
           </div>
           <div className="home-content">
             <RatingInput selectedDate={selectedDate} />

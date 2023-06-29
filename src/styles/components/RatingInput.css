@@ -1,12 +1,12 @@
 .circle {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 9vh;
+    height: 9vh;
     border-radius: 50%;
     border:none; 
     text-align: center;
     cursor: pointer;
-    margin-right: 40px;
+    margin-right: 8vh;
     transition: all 0.2s ease; 
   }
 
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40vh;   
+    height: 27vh;   
   }
 
   .circle.selected,
