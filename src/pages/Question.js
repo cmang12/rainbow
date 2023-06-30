@@ -14,9 +14,9 @@ function Question({ isAuth }) {
   const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
-    if (!isAuth) {
+    if (isAuth === false) {
       navigate("/login");
-    }
+    } 
   }, [isAuth, navigate]);
 
   return (
