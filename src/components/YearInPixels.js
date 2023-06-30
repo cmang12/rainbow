@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/components/YearInPixels.css';
 import { db, auth } from '../config/firebase-config';
 import { collection, query, where, getDocs } from 'firebase/firestore';
+import Tooltip from '@mui/material/Tooltip';
 
 const YearInPixels = ({ selectedYear }) => {
   const [moodData, setMoodData] = useState([]);
@@ -44,9 +45,11 @@ const YearInPixels = ({ selectedYear }) => {
     <div className="year-in-pixels-container">
       <div className="year-in-pixels">
         {moodData.map((rating) => (
+          <Tooltip title={rating}>
           <div
             className={`pixel ${rating !== 0 ? `mood-${rating}` : 'grey'}`}
           ></div>
+          </Tooltip>
         ))}
       </div>
     </div>

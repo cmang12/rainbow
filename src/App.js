@@ -25,7 +25,7 @@ function App() {
           path="/"
           element={isAuth ? <Navigate to= "/home"/>: <Navigate to="/login" />}
         />
-        <Route path="/home" element={<Layout><Home /></Layout>} />
+        <Route path="/home" element={<Layout><Home isAuth={isAuth} /></Layout>} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/question" element={<Layout><Question isAuth = {isAuth} /></Layout>} />
         <Route path="/journal" element ={<Layout><Journal/></Layout>}/>

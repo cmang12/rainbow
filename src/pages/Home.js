@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import LiveDate from '../components/LiveDate';
 import MainButton from '../components/MainButton';
 import Title from '../components/Title';
@@ -7,8 +8,16 @@ import YearSelector from '../components/YearSelector'; // Import the YearSelecto
 import '../styles/pages/Home.css';
 import '../styles/index.css';
 
-const Home = () => {
+function Home ({isAuth}) {
+  const navigate = useNavigate();
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+
+  //useEffect(() => {
+    //const storedAuth = localStorage.getItem("isAuth");
+    //if (!storedAuth) {
+      //navigate("/login");
+    //}
+  //}, [isAuth, navigate]);
 
   const handleYearChange = (year) => {
     setSelectedYear(year);
