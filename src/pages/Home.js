@@ -29,8 +29,11 @@ function Home ({isAuth}) {
         <Title />
         <LiveDate />
         <MainButton />
-        <YearInPixels selectedYear={selectedYear} />
+        <div className='yearSelector'> 
         <YearSelector selectedYear={selectedYear} onYearChange={handleYearChange} />
+        </div>
+        <YearInPixels selectedYear={selectedYear} />
+        
       </header>
     </div>
   );

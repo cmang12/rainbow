@@ -7,7 +7,7 @@
     pointer-events: none;
   }
   
- 
+  
   
   .Home-h1 {
     color: #B65B71;
@@ -27,6 +27,10 @@
   
   .Home-link {
     color: #61dafb;
+  }
+
+  .yearSelector {
+    text-align: left;
   }
   
   

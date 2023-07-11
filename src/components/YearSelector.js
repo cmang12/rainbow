@@ -1,7 +1,8 @@
 import React from 'react';
+import '../styles/components/YearSelector.css'; 
 
 const YearSelector = ({ selectedYear, onYearChange }) => {
-  const years = [2021, 2022, 2023]; // Example years, replace with your own logic to generate years
+  const years = [2021, 2022, 2023]; 
 
   const handleYearChange = (e) => {
     const year = parseInt(e.target.value);
@@ -10,8 +11,8 @@ const YearSelector = ({ selectedYear, onYearChange }) => {
 
   return (
     <div>
-      <label htmlFor="year">Select Year: </label>
-      <select id="year" value={selectedYear} onChange={handleYearChange}>
+      <label className='labelForYearSelector' htmlFor="year">Select Year: </label>
+      <select className="yearSelectorButton" id="year" value={selectedYear} onChange={handleYearChange}>
         {years.map((year) => (
           <option key={year} value={year}>
             {year}

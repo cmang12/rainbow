@@ -58,7 +58,7 @@ function CreateEntry({ selectedDate }) {
         <div className="inputGp">
         <label>Title</label>
         <input
-          placeholder="Title..."
+          placeholder="My first day of..."
           value={title}
           onChange={(event) => {
             setTitle(event.target.value);
@@ -66,9 +66,9 @@ function CreateEntry({ selectedDate }) {
         />
         </div>
         <div className="inputGp">
-          <label>Post</label>
+          <label>Entry</label>
           <textarea
-            placeholder="Post..."
+            placeholder="Write your thoughts..."
             value={postText}
             onChange={(event) => {
               setPostText(event.target.value);

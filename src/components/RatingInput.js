@@ -27,6 +27,21 @@ const RatingInput = ({ selectedDate }) => {
   }, [selectedDate, db]);
 
 
+  const getMoodLabel = (rating) => {
+    if (rating == 1) {
+      return 'angry';
+    } else if (rating == 2) {
+      return 'sad'; 
+    } else if (rating == 3) {
+      return 'tiring'; 
+    } else if (rating == 4) {
+      return 'normal'; 
+    } else if (rating == 5) {
+      return 'good';
+    } else if (rating == 6) {
+      return 'amazing'; 
+    }
+  };
   const handleRatingClick = (selectedRating) => {
     if (selectedRating === rating) {
       updateRating(0);
@@ -49,7 +64,7 @@ const RatingInput = ({ selectedDate }) => {
               value={value.toString()}
               onClick={() => handleRatingClick(value)}
             >
-        
+                <label className="button-label">{getMoodLabel(value)}</label>
             </button>
           ))}
         </div>

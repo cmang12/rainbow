@@ -16,3 +16,8 @@ code {
   font-family: 'DelaGothic';
   src: url('../assets/fonts/DelaGothicOne-Regular.ttf');
 }
+
+@font-face {
+  font-family:'DaysOne'; 
+  src: url('../assets/fonts/DaysOne-Regular.ttf');
+}

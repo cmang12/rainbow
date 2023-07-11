@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/components/LiveDate.css';
+import { auth } from '../config/firebase-config';
 
 const LiveDate = () => {
   const [date, setDate] = useState(new Date());

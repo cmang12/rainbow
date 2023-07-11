@@ -73,3 +73,12 @@
   .circle[value="6"] {
     background-color: #C76A6A;
   }
+
+  .button-label {
+    display: block;
+    margin-top: 60px;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'DaysOne';
+    color: brown; 
+  }

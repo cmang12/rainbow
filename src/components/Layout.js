@@ -54,6 +54,11 @@ const Layout = ({ children }) => {
               </button>
             </li>
             <li>
+              <button className="menu-item" onClick={() => navigate('/question')}>
+                Write
+              </button>
+            </li>
+            <li>
               <button className="menu-item" onClick={() => navigate('/journal')}>
                 Journal
               </button>
