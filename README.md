@@ -13,7 +13,7 @@ https://github.com/cmang12/rainbow/assets/85399634/e68dbcbf-16d2-460b-867d-01bfe
 
    `git clone https://github.com/cmang12/rainbow.git`
   
-4. Navigate your working directory to `webapp`
+4. Navigate your working directory to `rainbow-master`
    
 5. Install dependencies
 
