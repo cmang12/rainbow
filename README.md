@@ -10,16 +10,16 @@ https://github.com/cmang12/rainbow/assets/85399634/e68dbcbf-16d2-460b-867d-01bfe
 
 ## Try it for yourself! ##
 1. Clone the repository
-   
-  `git clone https://github.com/cmang12/rainbow.git`
+
+   `git clone https://github.com/cmang12/rainbow.git`
   
-3. Navigate your working directory to `webapp`
+4. Navigate your working directory to `webapp`
    
-4. Install dependencies
+5. Install dependencies
 
    `yarn install`
 
-5. Run the app
+6. Run the app
 
    `yarn start`
 
