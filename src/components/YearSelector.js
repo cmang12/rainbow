@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/components/YearSelector.css'; 
 
 const YearSelector = ({ selectedYear, onYearChange }) => {
-  const years = [2021, 2022, 2023]; 
+  const years = [2021, 2022, 2023, 2024]; 
 
   const handleYearChange = (e) => {
     const year = parseInt(e.target.value);

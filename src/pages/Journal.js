@@ -13,17 +13,17 @@ function Journal() {
   const getClassName = (color) => {
     if (color == 0) {
       return 'moodDiv-0';
-    } else if (color == 1) {
+    } else if (color === 1) {
       return 'angry'; 
-    } else if (color == 2) {
+    } else if (color === 2) {
       return 'sad'; 
-    } else if (color == 3) {
+    } else if (color === 3) {
       return 'tiring'; 
-    } else if (color == 4) {
+    } else if (color === 4) {
       return 'normal'; 
-    } else if (color == 5) {
+    } else if (color === 5) {
       return 'good'; 
-    } else if (color ==6) {
+    } else if (color === 6) {
       return 'amazing'; 
     }
   };
@@ -98,6 +98,7 @@ function Journal() {
         <option value={2021}>2021</option>
         <option value={2022}>2022</option>
         <option value={2023}>2023</option>
+        <option value={2024}>2024</option>
         {/* Add more options for different years */}
       </select>
 

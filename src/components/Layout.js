@@ -64,6 +64,11 @@ const Layout = ({ children }) => {
               </button>
             </li>
             <li>
+              <button className="menu-item" onClick={() => navigate('/chat')}>
+                Chat
+              </button>
+            </li>
+            <li>
               <button className="menu-item" onClick={handleLogOut}>
                 Log Out
               </button>

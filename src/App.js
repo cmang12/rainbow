@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login"; 
 import Question from "./pages/Question"; 
 import Journal from "./pages/Journal"; 
-
+import Chat from "./pages/Chat";
 
 function App() {
   const [isAuth, setIsAuth] = useState(false); 
@@ -29,6 +29,7 @@ function App() {
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
         <Route path="/question" element={<Layout><Question isAuth = {isAuth} /></Layout>} />
         <Route path="/journal" element ={<Layout><Journal/></Layout>}/>
+        <Route path="/chat" element ={<Layout><Chat/></Layout>}/>
       </Routes>
     </BrowserRouter>
   );

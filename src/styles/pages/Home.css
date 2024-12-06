@@ -7,7 +7,32 @@
     pointer-events: none;
   }
   
-  
+  /* Add the typewriter effect */
+  .personalizedAdvice {
+
+    color:#B65B71;
+    position: fixed;
+    top: 20px; /* Adjust this value to position it higher or lower on the screen */
+    right: 100px; /* Adjust this value to position it to the left or right */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border: 1px solid #ccc;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Optional: limit the width of the advice box */
+    z-index: 10; /* Ensures the advice box stays on top of other elements */
+    width: fit-content; 
+  }
+
+.adviceText {
+  font-size: smaller;
+  white-space: nowrap;
+  overflow-wrap: break-word;
+  border-right: 4px solid #333;
+  width: 0;
+}
+
+
   
   .Home-h1 {
     color: #B65B71;

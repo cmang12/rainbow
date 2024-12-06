@@ -54,8 +54,8 @@ padding: 15px 20px;
 text-decoration: none;
 color: #fff;
 background-color: #C08AE0;
-border:none; 
 border-color: #fff;  
+border:none;
 border-radius: 20px;
 cursor: pointer;
 outline: none;
@@ -85,7 +85,7 @@ margin-bottom: 15px;
 .toggle-button,
 .menu-item {
 font-size: 16px; /* Adjust the font size as needed */
-font-family:'Courier New', Courier, monospace;
+font-family:'DelaGothic','Courier New', Courier, monospace;
 }
 
 
