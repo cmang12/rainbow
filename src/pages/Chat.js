@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import { auth } from "../config/firebase-config";
 import "../styles/pages/Chat.css";
 
 // API request function to get AI response
-const getAIResponse = async (userInput) => {
+const getAIResponse = async (userInput, userId) => {
   try {
     const response = await fetch("http://localhost:5000/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userInput }),
+      body: JSON.stringify({ userInput, userId }), 
     });
 
     if (!response.ok) {
@@ -30,6 +31,8 @@ const getAIResponse = async (userInput) => {
 const ChatPage = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  
+  const userId = auth.currentUser.uid; 
 
   // Handle sending a message
   const handleSendMessage = async () => {
@@ -41,7 +44,7 @@ const ChatPage = () => {
     setInputMessage(""); // Clear the input field
 
     // Fetch and display the AI response
-    const aiResponse = await getAIResponse(inputMessage);
+    const aiResponse = await getAIResponse(inputMessage, userId);
     const aiMessage = { sender: "ai", text: aiResponse };
     setMessages((prev) => [...prev, aiMessage]);
   };
