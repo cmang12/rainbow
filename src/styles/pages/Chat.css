@@ -4,12 +4,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding-bottom: 0;
     background-color:#F0CFFF;
     height: 100vh;
-    font-family: 'Courier New', Courier, monospace;;
+    font-family: 'Courier New', Courier, monospace;
   }
   
+  .chat-header{
+    font-family: 'DelaGothic';
+    color: #B65B71;
+  }
   /* Chat Container */
   .chat-container {
     display: flex;
@@ -17,12 +21,12 @@
     justify-content: space-between;
     width: 100%;
     max-width: 600px;
-    height: 80vh;
+    height: 70vh;
     background: #ffffff;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
   }
   
   /* Messages Section */
@@ -108,3 +112,28 @@
     background-color: #b65b71;
   }
   
+
+  .message.ai.loading {
+    display: flex;
+    align-items: center;
+    color: #888; /* Light gray text */
+  }
+  
+  .spinner {
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #888;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
