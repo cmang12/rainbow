@@ -5,7 +5,7 @@ const Title = () => {
     return (
         <div className='Title-div'> 
         
-        <h1 className="Title-h1"> My Virtual Diary </h1>
+        <h1 className="Title-h1"> My Rainbow Daily </h1>
         <img src={logo} className="Title-logo" alt="logo" />
 
         </div>

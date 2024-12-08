@@ -79,16 +79,16 @@ function Home({ isAuth }) {
       <header className="Home-header">
         <Title />
         <LiveDate />
-        <div className="personalizedAdvice">
-  <p className="adviceText">{personalizedAdvice}</p>
-</div>
+
         <MainButton />
         
         <div className="yearSelector">
           <YearSelector selectedYear={selectedYear} onYearChange={handleYearChange} />
         </div>
         <YearInPixels selectedYear={selectedYear} />
-        
+                <div className="personalizedAdvice">
+  <p className="adviceText">{personalizedAdvice}</p>
+</div>
       </header>
     </div>
   );
